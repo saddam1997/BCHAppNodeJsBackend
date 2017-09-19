@@ -1,0 +1,70 @@
+{
+  "data": {
+    "bid": [],
+    "user": []
+  },
+  "schema": {
+    "bid": {
+      "BCHbalance": {
+        "type": "float",
+        "defaultsTo": 0
+      },
+      "bidowner": {
+        "type": "integer",
+        "model": "user",
+        "foreignKey": true,
+        "alias": "bidowner"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      }
+    },
+    "user": {
+      "email": {
+        "type": "string",
+        "unique": true
+      },
+      "BTCbalance": {
+        "type": "float",
+        "defaultsTo": 0
+      },
+      "BCHbalance": {
+        "type": "float",
+        "defaultsTo": 0
+      },
+      "userBCHAddress": {
+        "type": "string"
+      },
+      "userBTCAddress": {
+        "type": "string"
+      },
+      "encryptedPassword": {
+        "type": "string"
+      },
+      "encryptedSpendingpassword": {
+        "type": "string"
+      },
+      "verifyEmail": {
+        "type": "boolean",
+        "defaultsTo": false
+      },
+      "isAdmin": {
+        "type": "boolean",
+        "defaultsTo": false
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      }
+    }
+  },
+  "counters": {
+    "bid": {},
+    "user": {}
+  }
+}
